@@ -3,7 +3,6 @@ import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 import CONFIG from '../config'
 import Announcement from './Announcement'
 import Card from './Card'
@@ -26,8 +25,8 @@ export function InfoCard(props) {
     <Card className='wow fadeInUp bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
       {/* 信息卡牌第一行 */}
       <div className='flex justify-between'>
-        {/* 问候语 */}
-        <GreetingsWords />
+        {/* 注释掉或移除 GreetingsWords 组件 */}
+        {/* <GreetingsWords /> */}
         {/* 头像 */}
         <div
           className={`${isSlugPage ? 'absolute right-0 -mt-8 -mr-6 hover:opacity-0 hover:scale-150 blur' : 'cursor-pointer'} justify-center items-center flex dark:text-gray-100 transform transitaion-all duration-200`}>
@@ -96,6 +95,4 @@ function MoreButton() {
       </div>
     </Link>
   )
-}
-
 }
